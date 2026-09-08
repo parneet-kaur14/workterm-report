@@ -25,7 +25,7 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto">
 	<li class="nav-item">
-		<a class="nav-link" href="#intro">Summer &amp; Fall 2025</a>
+		<a class="nav-link" href="#term-2025">Summer &amp; Fall 2025</a>
 	</li>
 
 	<li class="nav-item">
@@ -36,6 +36,23 @@
 		</div>
 	</nav>
 
+	<!-- =============================== -->
+<!-- SUMMER & FALL 2025 WORK TERM -->
+<!-- =============================== -->
+
+<details class="workterm-card" id="term-2025">
+	<summary class="workterm-summary">
+		<div>
+			<h2>Summer &amp; Fall 2025</h2>
+			<h4>Systems Support Technician</h4>
+			<p>Experiential Learning Hub, University of Guelph | May – December 2025</p>
+			<span class="workterm-click">Click to view work term report</span>
+		</div>
+	</summary>
+
+	<div class="workterm-content">
+
+		
 	<!-- INTRO -->
 	<section id="intro" class="py-5">
 		<div class="container">
@@ -1071,29 +1088,26 @@
 	</div>
 </section>
 
+			</div>
+</details>
+
 <!-- =============================== -->
 <!-- SUMMER 2026 WORK TERM REPORT -->
 <!-- =============================== -->
 
-<section id="summer2026" class="py-5">
-	<div class="container">
-
-		<div style="text-align:center; padding:60px 20px;">
-			<h1 style="font-weight:900; margin-bottom:15px;">
-				Summer 2026 Work Term
-			</h1>
-
-			<h3 style="color:#555; margin-bottom:10px;">
-				Advancement Systems &amp; Analysis Student Analyst
-			</h3>
-
-			<p style="font-size:18px; color:#666;">
-				University of Guelph | May – August 2026
-			</p>
+	<details class="workterm-card" id="summer2026" open>
+	<summary class="workterm-summary">
+		<div>
+			<h2>Summer 2026</h2>
+			<h4>Advancement Systems &amp; Analysis Student Analyst</h4>
+			<p>University of Guelph | May – August 2026</p>
+			<span class="workterm-click">Click to collapse or expand work term report</span>
 		</div>
+	</summary>
 
-	</div>
-</section>
+	<div class="workterm-content">
+
+
 
 
 <!-- SUMMER 2026 - INTRODUCTION -->
@@ -1636,11 +1650,101 @@
 	</div>
 </section>
 
+			</div>
+</details>
+
 
 <!-- footer -->
 <footer class="py-3 bg-dark text-light text-center">
 	<div class="container small">© <span id="year"></span> Parneet Kaur - Work term Report</div>
 </footer>
+
+	<style>
+
+	/* =============================== */
+/* WORK TERM CARDS */
+/* =============================== */
+
+.workterm-card {
+	margin: 40px auto;
+	max-width: 1150px;
+	border: 1px solid #ddd;
+	border-radius: 18px;
+	background: #ffffff;
+	overflow: hidden;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.workterm-summary {
+	list-style: none;
+	cursor: pointer;
+	padding: 30px 35px;
+	background: linear-gradient(135deg, #f8f9fa, #eef1f4);
+}
+
+.workterm-summary::-webkit-details-marker {
+	display: none;
+}
+
+.workterm-summary h2 {
+	margin: 0 0 8px;
+	font-weight: 800;
+}
+
+.workterm-summary h4 {
+	margin: 0 0 8px;
+	font-weight: 600;
+	color: #444;
+}
+
+.workterm-summary p {
+	margin: 0 0 10px;
+	color: #666;
+}
+
+.workterm-click {
+	font-size: 14px;
+	font-weight: 600;
+	color: #555;
+}
+
+.workterm-summary::after {
+	content: "▼";
+	float: right;
+	font-size: 20px;
+	margin-top: -55px;
+	transition: transform 0.2s ease;
+}
+
+.workterm-card[open] .workterm-summary::after {
+	transform: rotate(180deg);
+}
+
+.workterm-content {
+	padding-top: 10px;
+}
+
+.workterm-summary:hover {
+	background: linear-gradient(135deg, #f1f3f5, #e9ecef);
+}
+
+@media (max-width: 768px) {
+	.workterm-card {
+		margin: 25px 12px;
+	}
+
+	.workterm-summary {
+		padding: 24px 20px;
+	}
+
+	.workterm-summary::after {
+		float: none;
+		display: block;
+		margin-top: 15px;
+	}
+}
+
+		</style>
 
 <!-- site-wide width fix + small layout tweaks -->
 <style>
@@ -1737,6 +1841,16 @@
 		}
 	}
 </style>
+
+	<script>
+document.querySelectorAll('#s26-goals .accordion .acc-btn').forEach(btn => {
+	btn.addEventListener('click', () => {
+		const item = btn.closest('.acc-item');
+		const open = item.classList.toggle('acc-open');
+		btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+	});
+});
+</script>
 
 
 <!-- scripts -->
